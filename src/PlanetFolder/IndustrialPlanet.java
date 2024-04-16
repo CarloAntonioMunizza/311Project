@@ -1,6 +1,8 @@
+package PlanetFolder;
+
 import java.util.HashMap;
 
-public class IndustrialPlanet extends Planet{
+public class IndustrialPlanet extends Planet {
 	public IndustrialPlanet(String name, int size, int population) {
 		super(PlanetType.INDUSTRIAL, name, size, population);
 	}
@@ -17,7 +19,7 @@ public class IndustrialPlanet extends Planet{
 
 	@Override
 	public String toString() {
-		// Custom toString for DesertPlanet
+		// Custom toString for PlanetFolder.DesertPlanet
 		StringBuilder sb = new StringBuilder(super.toString());
 		sb.insert(0, "Industrial ");
 		return sb.toString();

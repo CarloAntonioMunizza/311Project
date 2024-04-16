@@ -1,5 +1,10 @@
+import PlanetFolder.DesertPlanet;
+import PlanetFolder.IcePlanet;
+import PlanetFolder.IndustrialPlanet;
+import PlanetFolder.MountainPlanet;
+import PlanetFolder.Planet;
+
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 public class Main {
@@ -17,3 +22,18 @@ public class Main {
         }
     }
 }
+
+
+
+
+// satellite to discover more planets
+// planets have resources and you can mine with upgrades
+// planets have limitless resources but different rates of mining
+// planets have their own rss inventory
+// turn based
+// further planets take more time
+// cargo ships and buildings cost specific rss
+// planets have satellite that reduce risk of travel and reduce travel time
+// max satellites have auto trading
+// combat is a percentage to encounter pirates
+// if combat occurs, have a chance for citical win or lose with losing or gaining rss and losing ships etc

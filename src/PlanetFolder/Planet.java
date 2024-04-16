@@ -1,3 +1,5 @@
+package PlanetFolder;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
@@ -27,7 +29,7 @@ public abstract class Planet {
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
-		sb.append(type.toString()).append(" Planet ").append(name);
+		sb.append(type.toString()).append(" PlanetFolder.Planet ").append(name);
 		sb.append(" (Size: ").append(size).append(", Population: ").append(population).append(")\n");
 		if (!resources.isEmpty()) {
 			sb.append("Resources:\n");
@@ -38,3 +40,7 @@ public abstract class Planet {
 		return sb.toString();
 	}
 }
+
+
+
+
