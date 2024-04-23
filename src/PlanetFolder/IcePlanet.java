@@ -1,7 +1,5 @@
 package PlanetFolder;
 
-import java.util.HashMap;
-
 public class IcePlanet extends Planet {
 	public IcePlanet(String name, int size, int population) {
 		super(PlanetType.ICE, name, size, population);

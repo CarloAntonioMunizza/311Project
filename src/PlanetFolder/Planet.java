@@ -5,6 +5,8 @@ import java.util.Map;
 import java.util.Random;
 
 public abstract class Planet {
+	protected int upgrades[][] = new int[6][3];
+	protected int inventroy[] = new int[6];
 	protected PlanetType type;
 	protected String name;
 	protected int size;
@@ -29,7 +31,7 @@ public abstract class Planet {
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
-		sb.append(type.toString()).append(" PlanetFolder.Planet ").append(name);
+		sb.append(name);
 		sb.append(" (Size: ").append(size).append(", Population: ").append(population).append(")\n");
 		if (!resources.isEmpty()) {
 			sb.append("Resources:\n");

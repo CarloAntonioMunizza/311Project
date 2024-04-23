@@ -1,5 +1,5 @@
 package PlanetFolder;
 
 public enum PlanetType {
-	INDUSTRIAL, OCEANIC, DESERT, ICE, MOUNTAIN
+	INDUSTRIAL, OCEANIC, DESERT, ICE, MOUNTAIN, HOME
 }
