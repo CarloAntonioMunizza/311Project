@@ -15,6 +15,8 @@ public class Main {
         //planets.add(new IcePlanet("Antarctica", 2, 20));
         //planets.add(HomePlanet.getInstance());
 
+        gui DEMO = new gui();
+
         MainMenu mainMenu = new MainMenu();
         mainMenu.displayMenuInput();
 
