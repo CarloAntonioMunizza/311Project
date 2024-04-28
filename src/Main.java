@@ -1,5 +1,6 @@
 import PlanetFolder.*;
 import MenuPackage.MainMenu;
+import ShipFolder.TransportShip;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,10 +16,10 @@ public class Main {
         //planets.add(new IcePlanet("Antarctica", 2, 20));
         //planets.add(HomePlanet.getInstance());
 
-        gui DEMO = new gui();
+        //gui DEMO = new gui();
 
-        MainMenu mainMenu = new MainMenu();
-        mainMenu.displayMenuInput();
+        //MainMenu mainMenu = new MainMenu();
+        //mainMenu.displayMenuInput();
 
         //for (Planet planet : planets) {
         //    System.out.println(planet);
