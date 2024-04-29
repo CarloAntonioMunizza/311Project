@@ -1,17 +1,19 @@
 package MenuPackage;
 
+import PlanetFolder.HomePlanet;
+import GameState.GameState;
 import java.io.IOException;
 import java.util.Scanner;
 import static MenuPackage.Style.*;
 
 public class MainMenu {
-	private Scanner scanner;
+	private static Scanner scanner;
 
 	public MainMenu() {
-		this.scanner = new Scanner(System.in);
+		scanner = new Scanner(System.in);
 	}
 
-	public void displayMenu(int choice) {
+	public static void displayMenu(int choice) {
 		for (int i = 0; i < 3; ++i) System.out.println();
 		System.out.println("+---------------------------------------------------+");
 		System.out.println("|                                                   |");
@@ -38,7 +40,7 @@ public class MainMenu {
 		//clearScreen();
 	}
 
-	public void displayMenuInput() {
+	public  void displayMenuInput() {
 		System.out.println("+---------------------------------------------------+");
 		System.out.println("|                                                   |");
 		System.out.println("|                -= Galactic Trade =-               |");
@@ -86,32 +88,32 @@ public class MainMenu {
 		}
 	}
 
-	public void clearScreen() {
+	public static void clearScreen() {
 		// Clears Screen in java
 		for (int i = 0; i < 6; ++i) System.out.println();
 	}
 
-	private void startNewGame() {
+	private static void startNewGame() {
 		System.out.println("Starting a new game...");
-		// Add logic to initialize a new game
+		GameState.InitializeNewGame();
 	}
 
-	private void saveGame() {
+	private static void saveGame() {
 		System.out.println("Saving the game...");
 		// Add logic to save the game
 	}
 
-	private void loadGame() {
+	private static void loadGame() {
 		System.out.println("Loading a game...");
 		// Add logic to load a saved game
 	}
 
-	private void resumeGame() {
+	private static void resumeGame() {
 		System.out.println("Resuming the game...");
 		// Add logic to resume a paused game
 	}
 
-	private void quitGame() {
+	private static void quitGame() {
 		System.out.println("Quitting the game, goodbye!");
 		// Add any cleanup code here before quitting
 	}
