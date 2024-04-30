@@ -5,13 +5,20 @@ import java.util.Map;
 import java.util.Random;
 
 public abstract class Planet {
-	protected int upgrades[][] = new int[6][3];
-	protected int inventroy[] = new int[6];
+	//protected int upgrades[][] = new int[6][3];
+	protected int inventory[] = new int[6];
+
+	int extractorLevel;
+	int factoryLevel;
+	int scannerLevel;
+
 	protected PlanetType type;
 	protected String name;
 	protected int size;
 	protected int population;
 	protected HashMap<ResourceType, Integer> resources = new HashMap<>();
+
+
 
 	public Planet(PlanetType type, String name, int size, int population) {
 		this.type = type;
@@ -21,11 +28,19 @@ public abstract class Planet {
 		initilizeResources();
 	}
 
+
+
 	protected abstract void initilizeResources();
 
 	protected int generateRandomResourceAmount(int base, int variance) {
 		Random random = new Random();
 		return base + random.nextInt(variance);
+	}
+
+	public void extractResource(ResourceType r) {
+		int temp = resources.get(r) * extractorLevel;
+		resources.put(r, temp);
+		System.out.println("Planet " + name + " has gained " + temp + r);
 	}
 
 	@Override
@@ -41,6 +56,48 @@ public abstract class Planet {
 		}
 		return sb.toString();
 	}
+
+
+	public int[] getInventory() {
+		return inventory;
+	}
+
+	public void setInventory(int[] inventory) {
+		this.inventory = inventory;
+	}
+
+	public PlanetType getType() {
+		return type;
+	}
+
+	public void setType(PlanetType type) {
+		this.type = type;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getSize() {
+		return size;
+	}
+
+	public void setSize(int size) {
+		this.size = size;
+	}
+
+	public int getPopulation() {
+		return population;
+	}
+
+	public void setPopulation(int population) {
+		this.population = population;
+	}
+
 }
 
 
