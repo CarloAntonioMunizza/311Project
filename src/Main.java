@@ -17,18 +17,14 @@ public class Main {
         planets.add(new IcePlanet("Antarctica", 2, 20));
         planets.add(HomePlanet.getInstance());
 
-        gui DEMO = new gui();
+        //gui DEMO = new gui();
 
+        //MainMenu mainMenu = new MainMenu();
+        //mainMenu.displayMenuInput();
 
-
-        MainMenu mainMenu = new MainMenu();
-        mainMenu.displayMenuInput();
-
-        GameState.InitializeNewGame();
-        GameState.newTurn();
-
-
-
+        for (Planet planet : planets) {
+            System.out.println(planet);
+        }
     }
 }
 
