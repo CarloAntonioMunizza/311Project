@@ -70,7 +70,7 @@ public class GUIMainMenu extends JFrame {
 
     private JButton createStyledButton(String text) {
         JButton button = new JButton(text);
-        button.setForeground(Color.BLACK);  // Text color for dark mode
+        button.setForeground(Color.WHITE);  // Text color for dark mode
         button.setBackground(Color.BLACK);  // Background color for buttons in dark mode
         button.setFocusPainted(false);
         button.setFont(new Font("Serif", Font.BOLD, 18));
