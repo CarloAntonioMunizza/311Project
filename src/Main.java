@@ -32,9 +32,9 @@ public class Main {
         //MainMenu mainMenu = new MainMenu();
         //mainMenu.displayMenuInput();
 
-        for (Planet planet : planets) {
-            System.out.println(planet);
-        }
+//        for (Planet planet : planets) {
+//            System.out.println(planet);
+//        }
     }
 }
 

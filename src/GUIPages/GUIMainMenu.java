@@ -2,6 +2,7 @@ package GUIPages;
 
 import javax.swing.*;
 import java.awt.*;
+import java.io.IOException;
 
 public class GUIMainMenu extends JFrame {
     private JButton LoadButton;
@@ -32,6 +33,17 @@ public class GUIMainMenu extends JFrame {
             dispose();  // Close the current window
         });
 
+        SaveButton.addActionListener(e -> {
+            try {
+                GameState.GameState.saveGame();
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
+            System.out.println("Game saved");
+
+            dispose();  // Close the current window
+        });
+
         // Create a panel for buttons with GridLayout for vertical alignment
         JPanel buttonPanel = new JPanel(new GridLayout(4, 1, 10, 10));
         buttonPanel.setBackground(Color.DARK_GRAY);  // Set the panel background for dark mode
@@ -58,7 +70,7 @@ public class GUIMainMenu extends JFrame {
 
     private JButton createStyledButton(String text) {
         JButton button = new JButton(text);
-        button.setForeground(Color.WHITE);  // Text color for dark mode
+        button.setForeground(Color.BLACK);  // Text color for dark mode
         button.setBackground(Color.BLACK);  // Background color for buttons in dark mode
         button.setFocusPainted(false);
         button.setFont(new Font("Serif", Font.BOLD, 18));

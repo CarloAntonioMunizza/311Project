@@ -1,10 +1,14 @@
 package PlanetFolder;
 
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
+import java.nio.file.FileSystems;
+import java.nio.file.Files;
+import java.nio.file.Path;
 
-public abstract class Planet {
+public abstract class Planet implements Serializable{
 	//protected int upgrades[][] = new int[6][3];
 	protected int inventory[] = new int[6];
 
