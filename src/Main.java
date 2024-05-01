@@ -1,7 +1,7 @@
-import GameState.GameState;
+import GUIPages.GUIMainMenu;
 import PlanetFolder.*;
-import MenuPackage.MainMenu;
-import ShipFolder.TransportShip;
+
+import javax.swing.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,18 +17,24 @@ public class Main {
         planets.add(new IcePlanet("Antarctica", 2, 20));
         planets.add(HomePlanet.getInstance());
 
-        gui DEMO = new gui();
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                // Create an instance of your GUI class
+                GUIMainMenu myGui = new GUIMainMenu();
+                // Configure the main JFrame
+                myGui.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                myGui.pack(); // Adjusts window to fit components if not already sized
+                myGui.setVisible(true); // Make the GUI visible
+            }
+        });
 
+        //MainMenu mainMenu = new MainMenu();
+        //mainMenu.displayMenuInput();
 
-
-        MainMenu mainMenu = new MainMenu();
-        mainMenu.displayMenuInput();
-
-        GameState.InitializeNewGame();
-        GameState.newTurn();
-
-
-
+        for (Planet planet : planets) {
+            System.out.println(planet);
+        }
     }
 }
 
